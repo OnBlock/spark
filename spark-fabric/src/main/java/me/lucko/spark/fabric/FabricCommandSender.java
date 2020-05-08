@@ -61,7 +61,7 @@ public class FabricCommandSender extends AbstractCommandSender<CommandOutput> {
     @Override
     public void sendMessage(Component message) {
         Text component = Text.Serializer.fromJson(GsonComponentSerializer.INSTANCE.serialize(message));
-        super.delegate.sendMessage(component);
+        super.delegate.sendSystemMessage(component);
     }
 
     @Override
